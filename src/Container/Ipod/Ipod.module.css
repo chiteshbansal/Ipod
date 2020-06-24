@@ -1,0 +1,177 @@
+.Ipod{
+    width: 50%;
+    height: 95%;
+    border-radius: 25px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    padding-bottom:1rem;
+    right: 35%;
+    transform: translate(10%,-50%);
+    /* border: 1px solid rgb(172, 243, 243); */
+    box-shadow:inset  0px 0px 25px blue , 10px 10px 10px 3px rgba(0,0,0,.2);
+    background-color: cyan;
+}
+
+.IpodContainer{
+    width: 40%;
+    height: 90%;
+    top: 50%;
+    right: 0%;
+    box-shadow: -2px 0px 15px rgba(0,0,0,.5);
+    background-image: linear-gradient(315deg,white,orange,orange 80%, rgb(240, 175, 56) 40%,white);
+    transform: translate(10%,-50%);
+    position: absolute;
+    background-color: white;
+
+}
+
+.IpodControls{
+    height: 40%;
+    width: 90%;
+    margin: 0rem auto;
+    box-sizing: border-box;
+    background-color: #ececec;
+    position: relative;
+    border-radius: 0px 0px 14px 14px ;
+    /* box-shadow: -5px -5px 5px 2px lightgray,5px 5px 5px 2px rgba(0,0,0,0.12); */
+   
+}
+
+.ControlPad{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    display: inline-block;
+    left: 10%;
+    background-color: #ececec;
+    border-radius: 50%;
+    border:1px solid #ececec;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.12),-15px -15px 15px rgba(255,255,255,0.5);
+}
+
+.ControlPad:hover{
+    box-shadow:15px 15px 15px rgba(0,0,0,0.12),
+            -15px -15px 15px rgba(255,255,255,0.5) ,
+            inset 5px 5px 15px rgba(0,0,0,0.12),
+            inset -15px -15px 15px rgba(255,255,255,0.5);
+}
+
+
+.MainBtn{
+    height: 40%;
+    width: 40%;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border: 1px solid #ececec;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.12),-15px -15px 15px rgba(255,255,255,0.5);
+}
+
+
+
+.MainBtn:after{
+    content:'\f011';
+    font-family: fontawesome;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+
+}
+
+.MainBtn:hover:after{
+    color: green;
+}
+
+.frwdBtn,.bkwrdBtn,.pauseBtn,.menuBtn{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.12),-15px -15px 15px rgba(255,255,255,0.5);
+}
+
+.bkwrdBtn{
+    transform: translate(0,-50%);
+    top: 50%;
+    left: 5%;
+}
+.frwdBtn:after{
+    font-family: fontawesome;
+    content:'\f04e';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+.bkwrdBtn:after{
+    font-family: fontawesome;
+    content:'\f04a';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+
+.pauseBtn:after{
+    font-family: fontawesome;
+    content:'\f04c';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+
+.menuBtn:after{
+    font-family: fontawesome;
+    content:'Menu';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.frwdBtn:hover,.bkwrdBtn:hover,.pauseBtn:hover,.menuBtn:hover{
+    box-shadow: 
+    15px 15px 15px rgba(0,0,0,0.12),
+    -15px -15px 15px rgba(255,255,255,0.5),
+    inset 5px 5px 15px rgba(0,0,0,0.12),
+    inset -5px -5px 15px rgba(255,255,255,0.5);
+}
+
+.frwdBtn{
+    width: 20%;
+    height: 20%;
+    transform: translate(0,-50%);
+    top: 50%;
+    right: 5%;
+
+}
+.menuBtn{
+    width: 20%;
+    height: 20%;
+    top: 5%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.pauseBtn{
+    width: 20%;
+    height: 20%;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+}

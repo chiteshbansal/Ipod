@@ -1,0 +1,58 @@
+.MusicPlayer{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTlO0uAM_xYRSJyeq9m80vlyuahf5sruBoNq4AKBArXphInDcxY&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position-x: 200%;
+    background-position-y: 50%;
+}
+
+.MusicMenu{
+    width: 50%;
+    height: 100%;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    animation: animate .5s ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        width: 0%;
+    }
+
+    25%{
+        widht:25%;
+    }
+    50%{
+        widht:50%;
+    }
+    100%{
+        widht:100%;
+    }
+}
+
+
+
+.MusicMenu div{
+    padding: 1rem;
+    font-family: cursive;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.MusicMenu div:before{
+    content: "";
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    color:black;
+    background-color: green;
+}
+
+.MusicPlayer div.active{
+    background-color: black;
+    color: white;
+}

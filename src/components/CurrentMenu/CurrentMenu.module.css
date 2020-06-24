@@ -1,0 +1,42 @@
+.CurrentMenu{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(315deg,red,orange ,white);
+}
+
+.CurrentMenu_content{
+    width: 80%;
+    height: 60%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    color:white;
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    font-family: cursive;
+}
+
+.CurrentMenu_content:before{
+    content: '';
+    background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a628cf7f-d42c-449f-a919-fdbf6735dcc3/d4ld208-4cbc1500-fa90-490c-95e7-dacab8167131.jpg/v1/fill/w_640,h_960,q_75,strp/blue_apple_ipod_background_by_duard1911_d4ld208-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC9hNjI4Y2Y3Zi1kNDJjLTQ0OWYtYTkxOS1mZGJmNjczNWRjYzNcL2Q0bGQyMDgtNGNiYzE1MDAtZmE5MC00OTBjLTk1ZTctZGFjYWI4MTY3MTMxLmpwZyIsIndpZHRoIjoiPD02NDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GyVdUXFOABBe1GigHT2IoNT4EoaRw7BB4ktFtdFUpzU');
+    height: 100%;
+    background-size: cover;
+    background-position-y: 30%;
+    position: absolute;
+    left: 30%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: -1;
+
+}
