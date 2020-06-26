@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './MusicPlayer.module.css';
-import AllSongs from '../../components/MusicPlayer/AllSongs/AllSongs';
+import AllSongs from '../AllSongs/AllSongs';
 import Artists from '../../components/MusicPlayer/Artists/Artists';
 class MusicPlayer extends React.Component{
     state = {

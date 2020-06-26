@@ -1,0 +1,114 @@
+.AllSongs{
+    background-color: white;
+    box-shadow: 4px 4px 5px 2px rgab(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQt7NXOklw5yZtpKPfp0Vmn3EOAH4LVqm2WQzgwu1xBuNeS7X4Q&usqp=CAU");
+    background-size: contain;
+    /* background-position-y: 20; */
+}
+
+.frwdBtn,.bkwrdBtn,.PauseBtn{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.12),-15px -15px 15px rgba(255,255,255,0.5);
+}
+
+.PauseBtn{
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    top: 164%;
+    left: 51%;
+
+    transform: translateX(-50%);
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.12),-15px -15px 15px rgba(255,255,255,0.5);
+}
+.frwdBtn:after{
+    font-family: fontawesome;
+    content:'\f04e';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+
+.pause:after{
+    font-family: fontawesome;
+    content:'\f04b';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+
+.play:after{
+    font-family: fontawesome;
+    content:'\f04c';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+
+
+.bkwrdBtn:after{
+    font-family: fontawesome;
+    content:'\f04a';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+}
+.bkwrdBtn{
+    width: 15%;
+    height: 14%;
+    transform: translate(0,-50%);
+    top: 150%;
+    left: 15%;
+}
+.frwdBtn{
+    width: 15%;
+    height: 15%;
+    transform: translate(0,-50%);
+    top: 150%;
+    right: 14%;
+}
+
+.frwdBtn:hover,.bkwrdBtn:hover,.PauseBtn:hover{
+    box-shadow: 
+    15px 15px 15px rgba(0,0,0,0.12),
+    -15px -15px 15px rgba(255,255,255,0.5),
+    inset 5px 5px 15px rgba(0,0,0,0.12),
+    inset -5px -5px 15px rgba(255,255,255,0.5);
+}
+.AllSongs img{
+    width: 100%;
+}
+
+.AllSongs audio{
+    width: 100%;
+}
+
+.SongCnt{
+    margin: 1rem;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px white;
+}
