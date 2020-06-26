@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './AllSongs.module.css';
 import Songs from './songs';
 import images from './songimages';
-import {connect} from 'react-redux';
 class AllSongs extends React.Component{
 
     state={
@@ -88,9 +87,5 @@ class AllSongs extends React.Component{
     }
 }
 
-const mapStateToprops = state =>{
-    return{
-        Ispause:state.Ispause,
-    }
-}
-export default connect(mapStateToprops)(AllSongs);
+
+export default AllSongs;
