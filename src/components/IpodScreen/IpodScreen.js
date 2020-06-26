@@ -13,12 +13,16 @@ const IpodScreen = (props) =>{
     }
     let menu = ["Music",'Setting','Games','CoverFlow'];
     console.log('current menu state',props.showCurrentMenu);
+    let date = new Date();
     return(
         <div className={classes.IpodScreen}>
             <div className={classes.screenheader}>
                 <i class="fas fa-wifi"></i>
                 <i class="fas fa-sim-card"></i>
                 <i class="fas fa-battery-three-quarters"></i>
+            </div>
+            <div className={classes.TimeBox}>
+                {date.toLocaleTimeString()}
             </div>
             {props.showCurrentMenu?<CurrentMenu currentMenu
              MusicMenu = {props.MusicMenu}

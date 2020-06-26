@@ -32,7 +32,7 @@ class MusicPlayer extends React.Component{
         let currentMusicMenu =null;
         let menu = <div className={classes.MusicMenu}>
                         <div className={Menuclasses[0]}>All songs</div>
-                        <div className={Menuclasses[1]}>Artits</div>
+                        <div className={Menuclasses[1]}>Artists</div>
                         <div className={Menuclasses[2]}>Albums</div>
                     </div>
         

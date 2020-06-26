@@ -10,6 +10,7 @@ body {
   /* position: relative; */
 }
 body:before{
+  display: none;
   content: '';
   width: 60%;
   height: 90%;
@@ -27,9 +28,10 @@ body:before{
 
 body:after{
   content: 'Ipod';
+  
   width: 250px;
   height: 80px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
@@ -53,4 +55,15 @@ body:after:after{
 
 body:after:hover body:after{
   box-shadow: 0 0px 5px 4px rgba(0,0,0,0.2),inset 5px 5px 5px  rgba(0,0,0,0.1);
+}
+
+
+@media (min-width:700px){
+  body:before{
+    display: block;
+    text-align: center;
+  }
+  body:after{
+    display:flex;
+  }
 }
