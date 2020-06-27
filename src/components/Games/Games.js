@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './Games.module.css';
-
+// Simple template for a game option 
 const Games = (props)=>{
-    console.log('inside the game');
     return(
         <div className={classes.Games}>
 

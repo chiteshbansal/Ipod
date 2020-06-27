@@ -4,29 +4,25 @@ import AllSongs from '../AllSongs/AllSongs';
 import Artists from '../../components/MusicPlayer/Artists/Artists';
 class MusicPlayer extends React.Component{
     state = {
-        showMenu:true,
+        showMenu:true,// to show the music menu or any specific option component
     }
 
     shouldComponentUpdate(prevprops,nextprops){
-        console.log(prevprops,nextprops);
+        //  update only when there is a change in the music option 
+        // using the control pad 
         return prevprops.ShowMusicMenu!==nextprops.ShowMusicMenu;
+        //  to avoid infinite update calls in the componenetdidupdate
     }
 
     componentDidUpdate(){
-        console.log('inside the component will update')
         if(this.state.showMenu!==this.props.ShowMusicMenu)
         this.setState({showMenu:this.props.ShowMusicMenu})
     }
-
-    // BackToMenuHandler = ()=>{
-    //     console.log('back to menu heandler')
-    //     this.setState({
-    //         showMenu:true,
-    //     })
-    // }
     
     render(){
 
+        // to differentiate the current active menu with the other 
+        // by applying the active class to it 
         let  Menuclasses = ['','',''];
         Menuclasses[this.props.MusicMenu] = classes.active;
         let currentMusicMenu =null;
@@ -35,7 +31,8 @@ class MusicPlayer extends React.Component{
                         <div className={Menuclasses[1]}>Artists</div>
                         <div className={Menuclasses[2]}>Albums</div>
                     </div>
-        
+        // if we move to a particular menu in the music options 
+        // show the required menu container accordingly
         if(this.state.showMenu===false){
             menu = null;
             switch(this.props.MusicMenu){

@@ -6,3 +6,4 @@ import Song5 from '../../assets/Song5.jpg';
 
 
 export default {Song1,Song2,Song3,Song4,Song5};
+// exporing all the images corresponding to the song

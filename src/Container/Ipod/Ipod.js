@@ -4,23 +4,29 @@ import classes from './Ipod.module.css';
 import IpodScreen from '../../components/IpodScreen/IpodScreen';
 import ZingTouch from 'zingtouch';
 
+// This is the major component of the project the ipod container itself (root container )
 class Ipod extends React.Component{
     state={
         showMenu:false,// showing main menu or not
-        NumMenu :4,
+        NumMenu :4,// Number of menus so we don't need to change a lot of things 
+        // if we increase or decrease the menu 
         currentmenu:0,// current menu to rotote using zingtouch
-        currentAngle : 0,
+        currentAngle : 0,// this is to control the zing touch event 
+        //keeping track of the current menu and positon
         showCurrentMenu:false,
         currentMusicMenu:0,
         ShowMusicMenu :true,
     }
 
     componentDidMount(){
-        // console.log('insie teh comp did mout');
+       
         // applying zing touch to the control pad
+        // but only when the user in not inside any menu 
+        // else it can rotate the menu even if the user is 
+        /// inside a particular menu 
         if( this.state.showCurrentMenu===false){
             let target = document.getElementById('pad');
-            console.log('target is ',target);
+
             var region = ZingTouch.Region(target);
             region.bind(target, 'rotate', (e)=>this.rotateTheMenu(e)); 
         }             
@@ -29,28 +35,29 @@ class Ipod extends React.Component{
     rotateTheMenu = (e)=>{
             let {currentAngle} = this.state;
             let menu;
-            
+
+            // active menu to be passed to the child components 
             // currentAngle += e.detail.distanceFromLast;
             this.setState((prevState)=>{
                 return{currentAngle:prevState.currentAngle+e.detail.distanceFromLast};
             })
-            console.log('current angle is ',currentAngle);
-            console.log('distance from last orign ',e.detail.distanceFromLast)
+
 
             // in half the rotate of the pad 
             // rotating through all the menu options once
             let interval = 180/this.state.NumMenu;
             menu = Math.floor(currentAngle/interval)%4;
-            console.log(menu);
-            console.log(currentAngle);
+
+            // handling if the value of the menu becomes negative 
             if(menu<0){
                 menu+=40;
                 menu%=4;
             }
             
-            console.log('menu is ',menu);
+            
             // this is the condition  to check whether we are inside 
-            // the main menu or inside the music menu 
+            // the main menu or inside the music menu (submenu) and according 
+            // use the touch pad to change the options
             if(menu!==this.state.currentMenu && !this.state.showCurrentMenu){
                 // we are inside the main menu so we are changing the main options
                 this.setState({
@@ -86,10 +93,6 @@ class Ipod extends React.Component{
             })
         }
     }
-
-    playpauseHandler= ()=>{
-        this.setState()
-    }
     render(){
         return(
             <div className={classes.IpodContainer}>
@@ -100,7 +103,6 @@ class Ipod extends React.Component{
                     showCurrentMenu = {this.state.showCurrentMenu}
                     MusicMenu = {this.state.currentMusicMenu}
                     ShowMusicMenu={this.state.ShowMusicMenu}/>
-                    {/* <IpodControls clicked = {this.showMenuHandler}/> */}
                     <div className={classes.IpodControls}>
                         <div className={classes.ControlPad} id ='pad'>
                             <div className={classes.MainBtn} onClick={this.OpenCurrentMenuHandler} ></div>
